@@ -39,7 +39,7 @@ import the.commute.medmate.ui.theme.navColor
 @Composable
 fun BottomBar() {
     var navItemSelected by remember {
-        mutableIntStateOf(1)
+        mutableIntStateOf(0)
     }
     NavigationBar(containerColor = Color.White) {
         BottombarNavItems.bottomNavItems().forEachIndexed { navIndex, bottomBarItems ->

@@ -23,10 +23,6 @@ I
 gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
 ì
 capp/src/main/java/the/commute/medmate/features/bottomscreens/medicine_feature/utils/medicineCard.kt,7\1\71a6f41c880dcd19c7e20331b50dc3f53419ad28
-ç
-]app/src/main/java/the/commute/medmate/features/bottomscreens/medicine_feature/utils/topbar.kt,b\8\b89d172280ccf70ac78db40eeb46c3db3940be96
-ê
-`app/src/main/java/the/commute/medmate/features/bottomscreens/medicine_feature/utils/bottombar.kt,f\5\f596441b7efd2391d3f0366f2a06773cd4a3439f
 j
 :app/src/main/java/the/commute/medmate/navigation/navmap.kt,c\5\c57f816069a6b3a562b055ebb92577f6415d1d16
 s
@@ -35,3 +31,17 @@ Capp/src/main/java/the/commute/medmate/navigation/utils/bottombar.kt,c\3\c36842
 Zapp/src/main/java/the/commute/medmate/navigation/utils/bottombarUtils/BottombarNavItems.kt,b\f\bfc5e8b7958d27114010a8bf39a5bbbbeda98334
 e
 5app/src/main/java/the/commute/medmate/MainActivity.kt,4\0\403d053dd89e3bf96ede5a35f446d9a9ffea9d5c
+p
+@app/src/main/java/the/commute/medmate/navigation/utils/topbar.kt,c\2\c222b328164c3d67fba272542de5bd8cddcd7f1d
+t
+Dapp/src/main/java/the/commute/medmate/navigation/utils/Fab button.kt,4\d\4da1507ff09812798ce4e78e5866c0d54f931f4d
+è
+_app/src/main/java/the/commute/medmate/features/bottomscreens/doctor_feature/utils/doctorCard.kt,e\b\eb0411b6cafdaeaa16a996f26dc1741793f1ea18
+è
+_app/src/main/java/the/commute/medmate/features/bottomscreens/profile_feature/utils/menuItems.kt,4\f\4f5e800a05d924c1ccab6bd2d696fecd4cfc9cdf
+ñ
+fapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/settingsHeading.kt,7\0\708dc15192f66ecc6da1ca7e94b1f63918d9af82
+î
+dapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/SettingToggle.kt,8\7\878e7c0167a7bc91f7ad79a52209a4a0ad0ea979
+í
+bapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/settingMore.kt,9\c\9c20c097e98f0e28f622bcd4c33231b76a93665d

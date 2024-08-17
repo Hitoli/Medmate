@@ -1,4 +1,4 @@
-package the.commute.medmate.features.bottomscreens.medicine_feature.utils
+package the.commute.medmate.features.bottomscreens.doctor_feature.utils
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -16,8 +16,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Create
 import androidx.compose.material.icons.outlined.KeyboardArrowRight
-import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
@@ -29,9 +30,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
@@ -44,8 +43,9 @@ import the.commute.medmate.ui.theme.Snow
 import the.commute.medmate.ui.theme.fontFamilyRethink
 
 @Composable
-fun MedicineCard() {
-    Box(
+fun DoctorCard() {
+
+    Column(
         modifier = Modifier
             .padding(10.dp)
             .background(
@@ -70,8 +70,8 @@ fun MedicineCard() {
             horizontalArrangement = Arrangement.Start
         ) {
             Image(
-                painter = painterResource(id = R.drawable.medicineexample),
-                contentDescription = "medicine",
+                painter = painterResource(id = R.drawable.doctor),
+                contentDescription = "Doctor Image",
                 modifier = Modifier
                     .clip(shape = RoundedCornerShape(10.dp))
             )
@@ -90,7 +90,7 @@ fun MedicineCard() {
                         )
                     )
                     Text(
-                        text = "Strepsils", style = TextStyle(
+                        text = "Hitesh Kohli", style = TextStyle(
                             fontSize = 16.sp, color = Color.Black, letterSpacing = TextUnit(
                                 0.5f,
                                 TextUnitType.Sp
@@ -113,7 +113,7 @@ fun MedicineCard() {
                         )
                     )
                     Text(
-                        text = "Cough tablet",
+                        text = "Neurosurgeon",
                         style = TextStyle(fontSize = 16.sp, color = Color.Black),
                         fontFamily = fontFamilyRethink,
                         letterSpacing = TextUnit(
@@ -129,7 +129,7 @@ fun MedicineCard() {
                     horizontalAlignment = Alignment.Start
                 ) {
                     Text(
-                        text = "Next Dose",
+                        text = "Appointment Available",
                         style = TextStyle(
                             fontSize = 12.sp,
                             color = Color.Black.copy(alpha = 0.5f),
@@ -137,7 +137,7 @@ fun MedicineCard() {
                         )
                     )
                     Text(
-                        text = "5 PM",
+                        text = "5 PM | Wed 24 July",
                         style = TextStyle(fontSize = 16.sp, color = Color.Black),
                         fontFamily = fontFamilyRethink,
                         letterSpacing = TextUnit(
@@ -147,39 +147,52 @@ fun MedicineCard() {
                     )
                 }
             }
-
-            Column(modifier = Modifier, horizontalAlignment = Alignment.Start, verticalArrangement = Arrangement.SpaceEvenly) {
-                OutlinedButton(onClick = { /*TODO*/ }, border = BorderStroke(1.dp, color = Color.Black), modifier = Modifier.padding(1.dp), shape = RoundedCornerShape(10.dp)) {
-                    Row(modifier = Modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
-                        Text(
-                            text = "Learn more", style = TextStyle(
-                                fontSize = 10.sp, color = Color.Black
-                            ), fontFamily = fontFamilyRethink
+        }
+        Row(modifier = Modifier.fillMaxWidth()) {
+            Button( colors = ButtonDefaults.buttonColors(containerColor = BaseColor),
+                modifier = Modifier
+                    .padding(10.dp)
+                    .weight(1f),
+                onClick = { /*TODO*/ }, shape = RoundedCornerShape(10.dp)
+            ) {
+                Row(modifier = Modifier.padding(1.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
+                    Icon(imageVector = Icons.Outlined.Create, contentDescription ="medmate", tint = Color.White)
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = "Add Prescription",
+                        style = TextStyle(
+                            fontSize = 12.sp,
+                            color = Color.White,
+                            fontFamily = fontFamilyRethink
                         )
-                        Icon(imageVector = Icons.Outlined.KeyboardArrowRight, contentDescription ="Learn more", tint = Color.Black, modifier = Modifier.size(16.dp))
-                    }
-
+                    )
                 }
-              OutlinedButton(onClick = { /*TODO*/ }, border = BorderStroke(1.dp, color = Color.Black), modifier = Modifier.padding(1.dp), shape = RoundedCornerShape(10.dp)) {
-                  Row(modifier = Modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
-                      Text(
-                          text = "Schedule", style = TextStyle(
-                              fontSize = 10.sp, color = Color.Black
-                          ), fontFamily = fontFamilyRethink
-                      )
-                      Icon(imageVector = Icons.Outlined.KeyboardArrowRight, contentDescription ="Learn more", tint = Color.Black, modifier = Modifier.size(16.dp))
-                  }
-
-              }
             }
 
-
+            OutlinedButton(modifier = Modifier
+                .padding(10.dp)
+                .weight(1f),
+                onClick = { /*TODO*/ }, shape = RoundedCornerShape(10.dp), border = BorderStroke(1.dp, color= BaseColor)
+            ) {
+                Row(modifier = Modifier.padding(1.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = "Book Appointment",
+                        style = TextStyle(
+                            fontSize = 12.sp,
+                            color = BaseColor,
+                            fontFamily = fontFamilyRethink
+                        )
+                    )
+                }
+            }
         }
     }
+
 }
 
 @Preview(showBackground = true)
 @Composable
-fun MedicineCardPreview() {
-    MedicineCard()
+fun PreviewDoctorHeader() {
+    DoctorCard()
 }
