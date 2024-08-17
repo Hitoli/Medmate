@@ -13,6 +13,7 @@ import the.commute.medmate.features.bottomscreens.doctor_feature.Doctor
 import the.commute.medmate.features.bottomscreens.medicine_feature.Medicine
 import the.commute.medmate.features.bottomscreens.medicine_feature.utils.MedicineCard
 import the.commute.medmate.features.bottomscreens.profile_feature.Profile
+import the.commute.medmate.features.bottomscreens.settings_feature.Settings
 import the.commute.medmate.navigation.utils.BottomBar
 import the.commute.medmate.navigation.utils.FABbutton
 import the.commute.medmate.navigation.utils.Topbar
@@ -28,7 +29,7 @@ fun NavMap() {
             FABbutton()
         }) {
             val pad = it
-            Profile()
+            Settings()
         }
     }
 }

@@ -45,3 +45,5 @@ fapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/u
 dapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/SettingToggle.kt,8\7\878e7c0167a7bc91f7ad79a52209a4a0ad0ea979
 ’
 bapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/settingMore.kt,9\c\9c20c097e98f0e28f622bcd4c33231b76a93665d
+”
+dapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/SettingLogout.kt,6\f\6fce1395b84ed1e422a50f353b231c5be4336184
