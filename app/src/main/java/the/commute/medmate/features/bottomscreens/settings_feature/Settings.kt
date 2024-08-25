@@ -1,6 +1,7 @@
 package the.commute.medmate.features.bottomscreens.settings_feature
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,10 +18,10 @@ import the.commute.medmate.features.bottomscreens.settings_feature.utils.Setting
 import the.commute.medmate.features.bottomscreens.settings_feature.utils.SettingToggle
 
 @Composable
-fun Settings() {
+fun Settings(getPaddingValues: PaddingValues) {
     Box(modifier = Modifier
         .fillMaxSize()
-        .padding(horizontal = 20.dp, vertical = 50.dp)){
+        .padding(top = getPaddingValues.calculateTopPadding(), bottom = getPaddingValues.calculateBottomPadding(), start = 20.dp, end = 20.dp)){
         LazyColumn {
             item {
                 SettingHeading()
@@ -78,5 +79,5 @@ fun Settings() {
 @Preview(showBackground = true)
 @Composable
 fun PreviewSettings() {
-    Settings()
+    Settings(getPaddingValues = PaddingValues(50.dp))
 }

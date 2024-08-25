@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -41,13 +42,13 @@ import the.commute.medmate.ui.theme.BaseColor
 import the.commute.medmate.ui.theme.fontFamilyRethink
 
 @Composable
-fun Profile() {
+fun Profile(getPaddingValues: PaddingValues) {
     Box(modifier = Modifier.fillMaxSize()) {
 
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = 40.dp, vertical = 50.dp),
+                .padding(start = 40.dp, end = 40.dp, bottom = getPaddingValues.calculateBottomPadding(), top = getPaddingValues.calculateTopPadding()),
             verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.Start
         ) {
@@ -137,5 +138,5 @@ fun Profile() {
 @Preview(showBackground = true)
 @Composable
 fun PreviewProfile() {
-    Profile()
+    Profile(getPaddingValues = PaddingValues(50.dp))
 }

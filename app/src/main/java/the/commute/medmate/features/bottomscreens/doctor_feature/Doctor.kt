@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -37,10 +38,10 @@ import the.commute.medmate.ui.theme.BaseColor
 import the.commute.medmate.ui.theme.fontFamilyRethink
 
 @Composable
-fun Doctor() {
+fun Doctor(getPaddingValues: PaddingValues) {
     Box(modifier = Modifier
         .background(Color.White)
-        .fillMaxSize().padding(top = 50.dp, bottom = 50.dp)) {
+        .fillMaxSize().padding(top =getPaddingValues.calculateTopPadding(), bottom = getPaddingValues.calculateBottomPadding())) {
         LazyColumn {
             item {
             DoctorCard()
@@ -53,5 +54,5 @@ fun Doctor() {
 @Preview(showBackground = true)
 @Composable
 fun DoctorPreview() {
-    Doctor()
+    Doctor(getPaddingValues = PaddingValues(50.dp))
 }

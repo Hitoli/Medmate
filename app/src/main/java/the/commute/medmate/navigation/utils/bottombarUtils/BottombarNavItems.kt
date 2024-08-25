@@ -15,24 +15,24 @@ data class BottombarNavItems(
         fun bottomNavItems():List<BottombarNavItems>{
             return listOf(
                 BottombarNavItems(
-                    label="Home",
+                    label=Routes.Home.name,
                     icon = R.drawable.home,
-                    route = "HomeScreen"
+                    route = Routes.Home.name
                 ),
                 BottombarNavItems(
-                    label ="Doctor",
+                    label =Routes.Doctor.name,
                     icon = R.drawable.stethoscope,
-                    route ="DoctorScreen"
+                    route =Routes.Doctor.name
                 ),
                 BottombarNavItems(
-                    label="Profile",
+                    label=Routes.Profile.name,
                     icon= R.drawable.user,
-                    route ="EditProfileScreen"
+                    route =Routes.Profile.name
                 ),
                 BottombarNavItems(
-                    label ="Settings",
+                    label =Routes.Settings.name,
                     icon = R.drawable.setting,
-                    route ="SettingsScreen"
+                    route =Routes.Settings.name
                 )
             )
         }

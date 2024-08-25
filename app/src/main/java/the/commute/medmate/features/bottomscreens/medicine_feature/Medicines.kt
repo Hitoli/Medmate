@@ -39,14 +39,14 @@ import the.commute.medmate.ui.theme.Snow
 import the.commute.medmate.ui.theme.fontFamilyRethink
 
 @Composable
-fun Medicine() {
+fun Medicine(getPaddingValues: PaddingValues) {
     Box(
         modifier = Modifier.background(Color.White).fillMaxSize()
     ) {
         LazyColumn(
             contentPadding = PaddingValues(
-                top = 50.dp,
-                bottom = 50.dp
+                top = getPaddingValues.calculateTopPadding(),
+                bottom = getPaddingValues.calculateBottomPadding()
             )
         ) {
             items(10) {
@@ -63,5 +63,5 @@ fun Medicine() {
 @Preview(showBackground = true)
 @Composable
 fun MedicinePreview() {
-    Medicine()
+    Medicine(getPaddingValues = PaddingValues(50.dp))
 }

@@ -47,3 +47,9 @@ dapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/u
 bapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/settingMore.kt,9\c\9c20c097e98f0e28f622bcd4c33231b76a93665d
 ”
 dapp/src/main/java/the/commute/medmate/features/bottomscreens/settings_feature/utils/SettingLogout.kt,6\f\6fce1395b84ed1e422a50f353b231c5be4336184
+@
+build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+
+Oapp/src/main/java/the/commute/medmate/navigation/utils/bottombarUtils/Routes.kt,4\d\4d3f4aae31755d1cd03abd4473330f36f7ce676d
+Š
+Zapp/src/main/java/the/commute/medmate/navigation/utils/bottombarUtils/NavigationBarItem.kt,9\8\981ea78b0cd3df074c4b51b8b8e80568adeff859
